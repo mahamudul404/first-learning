@@ -1,20 +1,19 @@
 const getButton = document.getElementById("getDataBtn");
 const sendButton = document.getElementById("sendDataBtn");
 
-const getData = function () {
+const sendRequest = function (method, url) {
   const xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
-    xhr.send();
+  xhr.open(method, url);
+  xhr.send();
 
-    xhr.onload = function () {
-      const result = xhr.responseText;
-      console.log(result);
-    }
-}
+  xhr.onload = function () {
+    
+  };
+};
 
-const sendData = function () {
-  
-}
+const getData = function () {};
+
+const sendData = function () {};
 
 getButton.addEventListener("click", getData);
 sendButton.addEventListener("click", sendData);
